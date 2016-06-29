@@ -2,7 +2,7 @@
 // 10 print porting to P5js | San Marino, SM | 4.2016
 // Educational purpose, made for DSII2016 lab @UniRSM
 // Codice a barre
-
+<script language="javascript" type="text/javascript" src="path/to/p5.sound.js"></script>
 
 //inserimento input audio
 new p5.AudioIn()
@@ -16,6 +16,11 @@ var input;
 var analyzer;
 
 function setup() {
+   // Create an Audio input
+  mic = new p5.AudioIn();
+  // start the Audio Input.
+   mic.start();
+   
    pixelDensity(displayDensity());
    createCanvas(windowWidth, windowHeight);
    url = getURL();
